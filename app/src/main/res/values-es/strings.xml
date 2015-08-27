@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">HeadApp</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-8311139956951620/5053270395</string>
+    <string name="stay_hungry_stay_foolish">\"Stay Hungry, Stay Foolish\"</string>
+
+    <string name="app_info_message">Estas usando demasiado tu celular? HeadApp esta aquí para ayudarte. HeadApp siempre te notificara cuando crea conveniente para que dejes de lado tu celular y te concentres en lo que de verdad importa.</string>
+    <string name="app_info_title">Ayuda:</string>
+    <string name="read_tutorial">OK</string>
+    <string name="app_info_message_two">No debes hacer nada, HeadApp hace todo por ti.</string>
+    <string name="titulonotificacion">"Tu celular:"</string>
+
+    <string-array name="mensajes_pantalla">
+
+        <item>adivina</item>
+        <item>no no no</item>
+        <item>dale piñe </item>
+
+
+
+
+
+
+
+    </string-array>
+
+    <string-array name="mensajes_pantalla2">
+
+        <item>Media hora!</item>
+        <item>Porque no sales a trotar mejor.</item>
+        <item>Se te va a quemar el arroz</item>
+        <item>Deja de ser tan desocupad@.</item>
+        <item>desocupad@ desocupad@ desocupad@!</item>
+        <item>El mal uso de celular desbalancea tu vida.</item>
+        <item>Ve y consigue novi@.</item>
+        <item>Que antisocial que eres por un celular!</item>
+        <item>Lee un libro su batería es infinita.</item>
+        <item>30 minutos al día es una semana al año!</item>
+        <item>Levántate perezos@!</item>
+        <item>El cuello se te va a torcer.</item>
+        <item>No mates el tiempo, aprovéchalo. </item>
+        <item>La vida real está afuera de mi pantalla.</item>
+        <item>No te aísles mas! </item>
+        <item>Apaga el Wi-Fi.</item>
+        <item>30 minutos perdidos!</item>
+        <item>Se social! En el mundo real.</item>
+        <item>Afuera de la pantalla hay algo mejor.</item>
+        <item>Invierte el tiempo en tus objetivos!</item>
+        <item>Ansioso por encontrar Wi-Fi?</item>
+        <item>Necesitas más de Wi-Fi que de O2?</item>
+        <item>Vag@ Vag@ Vag@!</item>
+        <item>El exceso de porno es nocivo… solo digo.</item>
+
+
+    </string-array>
+
+    <string-array name="mensajes_pantalla3">
+
+        <item>Adict@ Adict@ Adict@!</item>
+        <item>45 minutos seguidos :(</item>
+        <item>Los días se te van al frente de mi pantalla.</item>
+        <item>Presentas síntomas de adicción, sabias?</item>
+        <item>Consigue un trabajo!</item>
+        <item>Ponte a laburar!</item>
+        <item>Mirando la pantalla no llegaras lejos.</item>
+        <item>Desconéctate en serio que ya me preocupas.</item>
+        <item>Estas preso de un celular!</item>
+        <item>Desátate del celular :O!</item>
+        <item>¿No ves en lo que te estas convirtiendo?</item>
+        <item>Soy nocivo para tus relaciones.</item>
+        <item>Ya en serio deja el porno.</item>
+        <item>Me convertí en tu vida!</item>
+        <item>Haz amigos, arma planes, vive!</item>
+        <item>Escapando de la realidad?</item>
+
+
+
+    </string-array>
+
+
+    <string-array name="mensajes_pantalla4">
+        <item>Necesitas más de mí que yo de ti.</item>
+        <item>Ya una hora seguida!</item>
+        <item>Tu vida es una pantalla!</item>
+        <item>Necesitas una intervención.</item>
+    </string-array>
+
+    <string-array name="mensajes_pantalla5">
+
+        <item>El uso de redes sociales es nocivo para tu autoestima.</item>
+        <item>Entre tus metas y tú está tu Smartphone.</item>
+        <item>Vuelve a ser humano y desconéctate. </item>
+        <item>Afuera hay un mundo por disfrutar.</item>
+        <item>Libérate de la ansiedad viviendo en modo off line. </item>
+        <item>Sonríe si tienes la batería baja.</item>
+        <item>Guarda momentos no fotografías.</item>
+        <item>Captura memorias no videos.</item>
+        <item>No compartas tus problemas mejor soluciónalos.</item>
+        <item>El uso de celular es nocivo para tu postura.</item>
+        <item>Menos celular igual menos ansiedad.</item>
+        <item>Tienes la concentración de un pez dorado!</item>
+        <item>Los días se te van al frente de mi pantalla.</item>
+        <item>El uso de celular es nocivo para tu creatividad.</item>
+        <item>No vivas en el mundo digital.</item>
+        <item>Comunícate de verdad simplemente habla.</item>
+        <item>No te pierdas el momento por tu celular.</item>
+        <item>Se productivo con tu tiempo.</item>
+        <item>El uso de celular es nocivo para la salud mental. </item>
+        <item>Sal de esta pantalla la vida tiene mejor resolución.</item>
+        <item>No hay necesidad de estar on-line para vivir.</item>
+
+    </string-array>
+
+
+
+</resources>
