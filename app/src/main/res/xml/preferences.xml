@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="NOMBRE"
+        android:title="@string/NombredeUsuario"
+        android:summary="@string/Summaryname"
+        android:defaultValue=""/>
+
+    <ListPreference
+        android:key="LISTA"
+        android:title="@string/comportamientodeHeadApp"
+        android:summary="@string/Summarymood"
+        android:entries="@array/listentries"
+        android:entryValues="@array/listvalues"
+        android:defaultValue="1"/>
+
+    <ListPreference
+        android:key="TYPEFACES"
+        android:title="@string/typefaces"
+        android:summary="@string/Summarytype"
+        android:entries="@array/typefaces"
+        android:entryValues="@array/typevalues"
+        android:defaultValue="1"/>
+
+    <SwitchPreference
+        android:key="COLORCARDS"
+        android:title="@string/colorcars"
+        android:summary="@string/Summarycolorcards"
+        android:defaultValue="false"
+
+        />
+
+    <Preference android:key="dialog_preference"
+        android:title="@string/creditos"/>
+
+    <Preference android:key="diseño"
+        android:title="@string/diseño"/>
+
+
+
+
+
+</PreferenceScreen>

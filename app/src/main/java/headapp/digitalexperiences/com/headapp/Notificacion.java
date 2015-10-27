@@ -13,29 +13,35 @@ import headup.digitalexperiences.com.headup.R;
 
 
 public class Notificacion {
-	
+
 	private Context context;
 	private String title, msg ;
+	private ColoresMa coloresOnboarding = new ColoresMa();
 
 	public Notificacion(String titulo , String mensaje, Context ctx) {
 		this.context = ctx;
 		title = titulo;
 		msg = mensaje;
-      }
-	
+	}
+
 	public void Notificador(){
-		
+
+		NotificationCompat.BigTextStyle notiStyle = new NotificationCompat.BigTextStyle();
+		notiStyle.setBigContentTitle(title);
+		notiStyle.bigText(msg);
 
 		NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
-			.setContentTitle(title)
-			.setContentText(msg)
-			.setCategory(NotificationCompat.CATEGORY_MESSAGE)
-			.setPriority(NotificationCompat.PRIORITY_HIGH)
-			.setVibrate(new long[]{ 1000, 1000, 1000, 1000, 1000 })
-			.setSmallIcon(R.drawable.ic_launchersmall)
-			.setAutoCancel(true)
-			.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_launcherlarge));
-		Intent resultIntent = new Intent(context, HeadUpMain.class);
+				.setContentTitle(title)
+				.setContentText(msg)
+				.setColor(coloresOnboarding.getColor())
+				.setCategory(NotificationCompat.CATEGORY_MESSAGE)
+				.setPriority(NotificationCompat.PRIORITY_HIGH)
+				.setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
+				.setSmallIcon(R.mipmap.ic_launchersmall)
+				.setAutoCancel(true)
+				.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcherlarge))
+				.setStyle(notiStyle);
+		Intent resultIntent = new Intent(context, HeadAppMain.class);
 		PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		mBuilder.setContentIntent(pendingIntent);
 		NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);

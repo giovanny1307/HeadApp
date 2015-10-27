@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="colorPrimario">#2D5D83</color>
+    <color name="colorPrimarioOscuro">#244a68</color>
+    <color name="colorBackground">#eaeef2</color>
+    <color name="tabsScrollColor">#ff6f0e</color>
+    <color name="colorHint">#402D5D83</color>
+    <color name="colorFondo">#E6E6E6</color>
+    <color name="colorContrastefondo">#98AAB4</color>
+    <color name="colorTextoTarjetas">#646464</color>
+    <color name="colorFondoTarjetas">#FAFAFA</color>
+
+
+
+
+
+</resources>

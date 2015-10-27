@@ -1,139 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HeadApp</string>
 
+
+        <string name="app_name">HeadApp</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-8311139956951620/5053270395</string>
-    <string name="stay_hungry_stay_foolish">\"Stay Hungry, Stay Foolish\"</string>
 
-    <string name="app_info_message">Estas usando demasiado tu celular? HeadApp esta aquí para ayudarte. HeadApp siempre te notificara cuando crea conveniente para que dejes de lado tu celular y te concentres en lo que de verdad importa.</string>
-    <string name="app_info_title">Ayuda:</string>
-    <string name="read_tutorial">OK</string>
-    <string name="app_info_message_two">No debes hacer nada, HeadApp hace todo por ti.</string>
-    <string name="titulonotificacion">"Tu celular:"</string>
-
-    <string-array name="mensajes_pantalla">
-
-        <item>Oye! Levanta la cabeza.</item>
-        <item>No te distraigas más!</item>
-        <item>Tomate un break y guarda el celular!</item>
-        <item>Bloquea el celular!</item>
-        <item>15 minutos es suficiente, no crees?</item>
-        <item>Por distraíd@ te come el tigre. </item>
-        <item>Ponte serio apártate del celular.</item>
-        <item>Cuidado que están robando bob@s!</item>
-        <item>Reduce tu ansiedad bloquea el celular!</item>
-        <item>Despabilé mij@!</item>
-        <item>Vuelve al trabajo!</item>
-        <item>Ya en serio deja el desocupe.</item>
-        <item>Tu tiempo es limitado, no lo malgastes.</item>
-        <item>Apártate del celular!</item>
-        <item>Pará pará pará! Y  bloquea el celu ;)</item>
-        <item>Y después te quejas que no tienes tiempo!</item>
-        <item>No descuides lo que importa por tu celular.</item>
-        <item>Desconéctate ahora!</item>
-        <item>Tú y tu necesidad de estar conectado!</item>
-        <item>Desconéctate de este aparato. </item>
-        <item>El hábito de revisar tu celular no es sano. </item>
-        <item>Para reducir ansiedad apaga el celular.</item>
-        <item>No te distraigas de lo importante.</item>
-        <item>No te compliques y mejor guarda el celular.</item>
-        <item>Ahorra bateria, guarda el celular. </item>
+        <string name="textoOnBoarding1Title">Bienvenido a HeadApp!</string>
 
 
 
+    <string name="bodyOnboarding1">Motiva tu vida con HeadApp, alcanza tus metas e inspirate a ser mejor usando
+    el poder de la palabra!</string>
+
+    <string name="bodyOnboarding1_2">Solo alimenta a HeadApp con mensajes positivos!  Veras como tu
+        realidad cambia y tus objetivos son alcanzados.</string>
+
+    <string name="bodyOnboarding2">Escribe mensajes enfocados a motivarte diariamente, inspirarte o alcanzar
+        ese objetivo que tanto deseas. Si no los necesitas mas simplemente deslízalos y
+        reemplázalos por mensajes nuevos.  </string>
+
+    <string name="bodyOnboarding3">HeadApp te devolverá tus mensajes en el momento adecuado, para
+        que nunca pierdas de vista lo que de verdad importa.   Que estas esperando, empieza ya a cambiar tu vida! .</string>
+
+        <string name="blank_slate">Comienza a cargar mensajes positivos y enseguida
+    enciende HeadApp haciendo click en el botón de encendido</string>
+
+        <string name="modointenso">Intenso</string>
+
+        <string name="modomedio">Moderado</string>
+
+        <string name="modorelax">Relajado</string>
+
+        <string name="comportamientodeHeadApp">Comportamiento de HeadApp</string>
+
+        <string name="Ajustes">Ajustes</string>
+
+        <string name="NombredeUsuario">Nombre de usuario</string>
+
+        <string name="Summarymood">Ajusta el comportamiento de HeadApp, entre más intenso más ayuda recibirás.</string>
+
+        <string name="ajustesgenerales">HeadApp settings</string>
+
+        <string name="Summaryname">Como quieres que HeadApp te llame.</string>
+
+        <string name="on">Encendido</string>
+
+        <string name="off">Apagado</string>
+
+        <string name="Comparte">Descubre HeadApp!</string>
+
+        <string name="Comparte2">Comparte</string>
+
+        <string name="typefaces">Tipo de fuente</string>
+
+        <string name="Summarytype">Selecciona un tipo de fuente.</string>
+
+        <string name="colorcars">Tarjetas multicolores.</string>
+
+        <string name="Summarycolorcards">Tus tarjetas tendran fondo de color.</string>
+
+        <string name="si">Si</string>
+
+        <string name="no">No</string>
+
+        <string name="quieres_eliminar">Eliminar?</string>
+
+        <string name="hecho">hecho</string>
+
+        <string name="saltar">saltar</string>
+
+        <string name="creditos">Creditos</string>
 
 
 
+           <string name="fuentesfonts">
+        Fuentes tipográficas Amatic, Lobster y Ostrich bajo la licencia SIL OPEN FONT LICENSE Versión 1.1.
 
+           </string>
+
+        <string-array name="hints">
+            <item>Escribe para tu mente</item>
+            <item>Textea para tu alma</item>
+            <item>Solo escribe algo positivo!</item>
+        </string-array>
+
+    <string-array name="mensajes_precargados">
+        <item>"Haz de tu vida un sueño, y de tu sueño una realidad."</item>
+        <item>No te rindas jamás!</item>
+        <item>Agradece cada día por todo lo que tienes.</item>
+        <item>Suéñalo, créelo, consíguelo.</item>
+        <item>Tú eres lo que dices! Usa el poder de la palabra.</item>
+        <item>No pierdas la fe, hay que ser positivo.</item>
+        <item>Todo lo puedo en Cristo que me fortalece.</item>
     </string-array>
 
-    <string-array name="mensajes_pantalla2">
-
-        <item>Media hora!</item>
-        <item>Porque no sales a trotar mejor.</item>
-        <item>Se te va a quemar el arroz</item>
-        <item>Deja de ser tan desocupad@.</item>
-        <item>desocupad@ desocupad@ desocupad@!</item>
-        <item>El mal uso de celular desbalancea tu vida.</item>
-        <item>Ve y consigue novi@.</item>
-        <item>Que antisocial que eres por un celular!</item>
-        <item>Lee un libro su batería es infinita.</item>
-        <item>30 minutos al día es una semana al año!</item>
-        <item>Levántate perezos@!</item>
-        <item>El cuello se te va a torcer.</item>
-        <item>No mates el tiempo, aprovéchalo. </item>
-        <item>La vida real está afuera de mi pantalla.</item>
-        <item>No te aísles mas! </item>
-        <item>Apaga el Wi-Fi.</item>
-        <item>30 minutos perdidos!</item>
-        <item>Se social! En el mundo real.</item>
-        <item>Afuera de la pantalla hay algo mejor.</item>
-        <item>Invierte el tiempo en tus objetivos!</item>
-        <item>Ansioso por encontrar Wi-Fi?</item>
-        <item>Necesitas más de Wi-Fi que de O2?</item>
-        <item>Vag@ Vag@ Vag@!</item>
-        <item>El exceso de porno es nocivo… solo digo.</item>
-
-
+    <string-array name="sufijos">
+        <item>nunca olvides que:</item>
+        <item>recuerda!</item>
+        <item>ten siempre presente:</item>
     </string-array>
 
-    <string-array name="mensajes_pantalla3">
-
-        <item>Adict@ Adict@ Adict@!</item>
-        <item>45 minutos seguidos :(</item>
-        <item>Los días se te van al frente de mi pantalla.</item>
-        <item>Presentas síntomas de adicción, sabias?</item>
-        <item>Consigue un trabajo!</item>
-        <item>Ponte a laburar!</item>
-        <item>Mirando la pantalla no llegaras lejos.</item>
-        <item>Desconéctate en serio que ya me preocupas.</item>
-        <item>Estas preso de un celular!</item>
-        <item>Desátate del celular :O!</item>
-        <item>¿No ves en lo que te estas convirtiendo?</item>
-        <item>Soy nocivo para tus relaciones.</item>
-        <item>Ya en serio deja el porno.</item>
-        <item>Me convertí en tu vida!</item>
-        <item>Haz amigos, arma planes, vive!</item>
-        <item>Escapando de la realidad?</item>
-
-
-
+    <string-array name="prefijos">
+        <item>Oye</item>
+        <item>Hey</item>
+        <item>Hola</item>
     </string-array>
 
-
-    <string-array name="mensajes_pantalla4">
-        <item>Necesitas más de mí que yo de ti.</item>
-        <item>Ya una hora seguida!</item>
-        <item>Tu vida es una pantalla!</item>
-        <item>Necesitas una intervención.</item>
-    </string-array>
-
-    <string-array name="mensajes_pantalla5">
-
-        <item>El uso de redes sociales es nocivo para tu autoestima.</item>
-        <item>Entre tus metas y tú está tu Smartphone.</item>
-        <item>Vuelve a ser humano y desconéctate. </item>
-        <item>Afuera hay un mundo por disfrutar.</item>
-        <item>Libérate de la ansiedad viviendo en modo off line. </item>
-        <item>Sonríe si tienes la batería baja.</item>
-        <item>Guarda momentos no fotografías.</item>
-        <item>Captura memorias no videos.</item>
-        <item>No compartas tus problemas mejor soluciónalos.</item>
-        <item>El uso de celular es nocivo para tu postura.</item>
-        <item>Menos celular igual menos ansiedad.</item>
-        <item>Tienes la concentración de un pez dorado!</item>
-        <item>Los días se te van al frente de mi pantalla.</item>
-        <item>El uso de celular es nocivo para tu creatividad.</item>
-        <item>No vivas en el mundo digital.</item>
-        <item>Comunícate de verdad simplemente habla.</item>
-        <item>No te pierdas el momento por tu celular.</item>
-        <item>Se productivo con tu tiempo.</item>
-        <item>El uso de celular es nocivo para la salud mental. </item>
-        <item>Sal de esta pantalla la vida tiene mejor resolución.</item>
-        <item>No hay necesidad de estar on-line para vivir.</item>
-
-    </string-array>
-
+     <string name="diseño">
+        Diseñado por DigitalExperiences en Bogotá.
+    </string>
 
 
 </resources>

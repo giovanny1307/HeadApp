@@ -1,128 +1,107 @@
 <resources>
-    <string name="app_name">HeadUp</string>
+    <string name="app_name">HeadApp</string>
 
+    <string name="textoOnBoarding1Title">Welcome to HeadApp!</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-8311139956951620/5053270395</string>
-    <string name="stay_hungry_stay_foolish">\"Stay Hungry, Stay Foolish\"</string>
 
-    <string name="app_info_message">Are you using your phone too much? HeadApp it\'s here to help! HeadApp will notify you at the right moment to get back to the things that really matter.</string>
-    <string name="app_info_title">Help:</string>
-    <string name="read_tutorial">OK</string>
-    <string name="app_info_message_two">You don\'t have to do anything, HeadApp will handle everything for you.</string>
-    <string name="titulonotificacion">"Your phone:"</string>
+    <string name="bodyOnboarding1">HeadApp will help encourage you on your life journey whether it\’s
+        goals or daily inspirations. By using the power of the spoken word.</string>
 
-    <string-array name="mensajes_pantalla">
-        <item>Hey, put your head up!</item>
-        <item>No more distractions!</item>
-        <item>Take a break put the phone away.</item>
-        <item>Just block the phone!</item>
-        <item>Hey Dick get to work!</item>
-        <item>Get off the phone.</item>
-        <item>Just put the phone down slowly.</item>
-        <item>Get your sh**t together!</item>
-        <item>Distracted people tend to fall. </item>
-        <item>Less anxiety if your block the phone.</item>
-        <item>YOU! Yes YOU get off the phone!!</item>
-        <item>Get to work</item>
-        <item>You could’ve been fu***ng</item>
-        <item>With all this wasted time you could’ve….</item>
-        <item>Stay away from the phone and run.</item>
-        <item>Stop just throw away the phone.</item>
-        <item>Life happens while you’re at your phone.</item>
-        <item>Don’t lose touch with reality. </item>
-        <item>Get off line NOW.</item>
-        <item>You are so needy for Wi-Fi.</item>
-        <item>I’m just a phone not your life. </item>
-        <item>You are checking me out way too much.</item>
-        <item>Turn off the phone it’s for the better. </item>
-        <item>Don’t get distracted from the important. </item>
-        <item>Watch where you’re walking DUMB ASS </item>
+    <string name="bodyOnboarding1_2">You can program HeadApp to motivate inspire, or help you achieve
+        that goal you\’ve always wanted. </string>
+
+    <string name="bodyOnboarding2">Simply fill HeadApp with encouraging messages that aim towards your
+        daily inspirations or desired goals. And if you don\’t want them anymore just swipe them
+        away and write new ones. </string>
+
+    <string name="bodyOnboarding3">HeadApp will deliver the messages to you at the right moment so you
+        can always be on track of what is really important! So what are you waiting for LET\’S GET STARTED!! .</string>
+
+    <string name="blank_slate">Write some inspiraional messages and tap the start button!</string>
+
+    <string name="modointenso">Intense</string>
+
+    <string name="modomedio">Mild</string>
+
+    <string name="modorelax">Calm</string>
+
+    <string name="comportamientodeHeadApp">HeadApp mood</string>
+
+    <string name="Ajustes">Settings</string>
+
+    <string name="NombredeUsuario">Username</string>
+
+    <string name="Summarymood">Set the tone of HeadApp behaviour, the more intense the more help you get.</string>
+
+    <string name="ajustesgenerales">HeadApp settings</string>
+
+    <string name="Summaryname">How would you like to be called by.</string>
+
+    <string name="on">On</string>
+
+    <string name="off">Off</string>
+
+    <string name="Comparte">Spread the word, discover HeadApp!</string>
+
+    <string name="Comparte2">Share</string>
+
+    <string name="typefaces">Typefaces</string>
+
+    <string name="Summarytype">Select a typeface for your message cards.</string>
+
+    <string name="colorcars">Multicolor cards</string>
+
+    <string name="Summarycolorcards">Set it on if you want your cards to display multicolor backgrounds.</string>
+
+    <string name="si">Yes</string>
+
+    <string name="no">No</string>
+
+    <string name="quieres_eliminar">Delete?</string>
+
+    <string name="hecho">done</string>
+
+    <string name="saltar">skip</string>
+
+    <string name="creditos">Credits</string>
+
+    <string name="fuentesfonts">
+        Amatic, Lobster and Ostrich font\'s under SIL OPEN FONT LICENSE Version 1.1.
+
+    </string>
+
+      <string name="diseño">
+        Designed by DigitalExperiences in Bogotá.
+    </string>
+
+    <string-array name="hints">
+        <item>Type for your mind</item>
+        <item>Text for your soul</item>
+        <item>Write something positive!</item>
     </string-array>
 
-    <string-array name="mensajes_pantalla2">
-
-        <item>Half an hour!</item>
-        <item>Go for a run fatty!!!</item>
-        <item>Your meal is going to burn. </item>
-        <item>Keep Calm and Get Yo Ass Up!</item>
-        <item>Life is better when you’re off your phone</item>
-        <item>You’ve just lost a billion brain cells </item>
-        <item>How’s the weather?</item>
-        <item>Stop being antisocial.</item>
-        <item>Read a book they have unlimited battery.</item>
-        <item>30 minutes a day equals a week in a year.</item>
-        <item>Get up you lazy you. </item>
-        <item>Take your filthy paws off of me</item>
-        <item>Your time is limited don’t wasted it. </item>
-        <item>Real life happens outside my screen.</item>
-        <item>Don’t get isolated. </item>
-        <item>Turn off the Wi-FI.</item>
-        <item>30 minutes lost!</item>
-        <item>Be social but in the real world.</item>
-        <item>There must be something better than this.</item>
-        <item>Get off your ass and work for your goals!</item>
-        <item>Anxious for Wi-Fi…JUNKY</item>
-        <item>Do you need more Wi-Fi that O2?</item>
-        <item>JUNKY JUNKY JUNKY!</item>
-        <item>Too much porn is bad… just saying. </item>
-
+    <string-array name="mensajes_precargados">
+        <item>Begin each day with a grateful heart.</item>
+        <item>Never give up!</item>
+        <item>Begin each day with a grateful heart.</item>
+        <item>Dream it. Believe it. Achieve it.</item>
+        <item>You are what you say! Use the power of the spoken word.</item>
+        <item>Don\’t stress! Do your best! Forget the rest!</item>
+        <item>A lion doesn\’t lose sleep over the opinion of sheep.</item>
     </string-array>
 
-    <string-array name="mensajes_pantalla3">
-
-        <item>ADDICT ADDICT ADDICT!</item>
-        <item>Your\'ve been using this for 45 minutes.</item>
-        <item>Your days go by in front of a screen :(</item>
-        <item>You seem to be an addict.</item>
-        <item>Go get a job.</item>
-        <item>Get A Life Loser!</item>
-        <item>Watching at a screen will not get you far. </item>
-        <item>Get off the hook for real.</item>
-        <item>You’re living in a cage!</item>
-        <item>Get free from the phone!</item>
-        <item>¿Don’t you see in what you’re becoming?</item>
-        <item>I’m bad for you relationships. </item>
-        <item>For real stop with the porn.</item>
-        <item>I’m becoming in your life.</item>
-        <item>Go out make some friends. </item>
-        <item>Escaping reality?</item>
-
+    <string-array name="sufijos">
+        <item>never forget!</item>
+        <item>remember!</item>
+        <item>get it on your head!</item>
     </string-array>
 
-
-    <string-array name="mensajes_pantalla4">
-        <item>IDGAF. I literally DGAF.</item>
-        <item>You could be getting some head right now</item>
-        <item>Saddle up cowboy!</item>
-        <item>You need an intervention. </item>
+    <string-array name="prefijos">
+        <item>Hi</item>
+        <item>Hey</item>
+        <item>Listen</item>
     </string-array>
-
-    <string-array name="mensajes_pantalla5">
-
-        <item>Too much social networks could damage your self steem.</item>
-        <item>Between your goals and you there is your smartphone.</item>
-        <item>Go back to be human again get off line. </item>
-        <item>There is a whole world outside to enjoy.</item>
-        <item>Get free from anxiety live in off line mode. </item>
-        <item>Smile if you have your battery low.</item>
-        <item>Save momentes not pictures.</item>
-        <item>Capture moments not videos.</item>
-        <item>Don\'t share your problems fix them.</item>
-        <item>By using too much your phone you could damage your spine.</item>
-        <item>Less phone equals less anxiety.</item>
-        <item>You now have the concentration span of a gold fish.</item>
-        <item>Days go by in front of a screen.</item>
-        <item>Be creative not a slave of your phone.</item>
-        <item>Don\'t live in the digital world.</item>
-        <item>Get real communication, speak!</item>
-        <item>Don\'t lose any moment because of your smartphone.</item>
-        <item>Be productive!</item>
-        <item>By using too much your phone you could damage your head. </item>
-        <item>Get out of the window real life has better resolution.</item>
-        <item>There\'s no need to be connected all the time.</item>
-
-    </string-array>
-
 
 
 </resources>
