@@ -10,10 +10,9 @@
 
 
 
-    <string name="bodyOnboarding1">Motiva tu vida con HeadApp, alcanza tus metas e inspirate a ser mejor usando
-    el poder de la palabra!</string>
+    <string name="bodyOnboarding1">Motiva tu vida con HeadApp, alcanza tus metas e inspirate a ser mejor.</string>
 
-    <string name="bodyOnboarding1_2">Solo alimenta a HeadApp con mensajes positivos!  Veras como tu
+    <string name="bodyOnboarding1_2">Simplemente alimenta a HeadApp con mensajes positivos!  Veras como tu
         realidad cambia y tus objetivos son alcanzados.</string>
 
     <string name="bodyOnboarding2">Escribe mensajes enfocados a motivarte diariamente, inspirarte o alcanzar
@@ -21,24 +20,24 @@
         reemplázalos por mensajes nuevos.  </string>
 
     <string name="bodyOnboarding3">HeadApp te devolverá tus mensajes en el momento adecuado, para
-        que nunca pierdas de vista lo que de verdad importa.   Que estas esperando, empieza ya a cambiar tu vida! .</string>
+        que nunca pierdas de vista lo que de verdad importa.   Que estas esperando, empieza ya! .</string>
 
         <string name="blank_slate">Comienza a cargar mensajes positivos y enseguida
     enciende HeadApp haciendo click en el botón de encendido</string>
 
-        <string name="modointenso">Intenso</string>
+        <string name="modointenso">Alta</string>
 
-        <string name="modomedio">Moderado</string>
+        <string name="modomedio">Media</string>
 
-        <string name="modorelax">Relajado</string>
+        <string name="modorelax">Baja</string>
 
-        <string name="comportamientodeHeadApp">Comportamiento de HeadApp</string>
+        <string name="comportamientodeHeadApp">Frecuencia de envío de mensaje.</string>
 
         <string name="Ajustes">Ajustes</string>
 
         <string name="NombredeUsuario">Nombre de usuario</string>
 
-        <string name="Summarymood">Ajusta el comportamiento de HeadApp, entre más intenso más ayuda recibirás.</string>
+        <string name="Summarymood">Ajusta la frecuencia de notificación.</string>
 
         <string name="ajustesgenerales">HeadApp settings</string>
 
@@ -52,13 +51,9 @@
 
         <string name="Comparte2">Comparte</string>
 
-        <string name="typefaces">Tipo de fuente</string>
+        <string name="typefaces">Tipo de letra</string>
 
-        <string name="Summarytype">Selecciona un tipo de fuente.</string>
-
-        <string name="colorcars">Tarjetas multicolores.</string>
-
-        <string name="Summarycolorcards">Tus tarjetas tendran fondo de color.</string>
+        <string name="Summarytype">Selecciona un tipo de letra.</string>
 
         <string name="si">Si</string>
 
@@ -71,6 +66,11 @@
         <string name="saltar">saltar</string>
 
         <string name="creditos">Creditos</string>
+
+        <string name="listentries">listentries</string>
+        <string name="listvalues">listvalues</string>
+        <string name="typevalues">typevalues</string>
+
 
 
 
@@ -89,10 +89,10 @@
         <item>"Haz de tu vida un sueño, y de tu sueño una realidad."</item>
         <item>No te rindas jamás!</item>
         <item>Agradece cada día por todo lo que tienes.</item>
-        <item>Suéñalo, créelo, consíguelo.</item>
-        <item>Tú eres lo que dices! Usa el poder de la palabra.</item>
-        <item>No pierdas la fe, hay que ser positivo.</item>
-        <item>Todo lo puedo en Cristo que me fortalece.</item>
+        <item>¡Anímate! Escribe algo que te inspire.</item>
+        <item>"toda la sabiduría humana estará resumida en dos palabras: ¡Confiar y esperar!"</item>
+        <item>Nada viene de nada, todo requiere esfuerzo.</item>
+        <item>No pierdas de vista lo importante.</item>
     </string-array>
 
     <string-array name="sufijos">
@@ -108,7 +108,7 @@
     </string-array>
 
      <string name="diseño">
-        Diseñado por DigitalExperiences en Bogotá.
+        Creado por DigitalExperiences en Bogotá.
     </string>
 
 

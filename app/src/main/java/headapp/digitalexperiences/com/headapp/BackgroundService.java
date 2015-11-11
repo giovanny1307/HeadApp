@@ -12,15 +12,36 @@ import java.security.SecureRandom;
 
 /**
  * Created by Giovanny on 10/26/2015.
+ * Felicidad verdadera
+
+ 1 Feliz el hombre
+ que no sigue el consejo de los malvados,
+ ni va por el camino de los pecadores,
+ ni hace causa común con los que se burlan de Dios,
+ 2
+ sino que pone su amor en la ley del Señor
+ y en ella medita noche y día.
+ 3
+ Ese hombre es como un árbol
+ plantado a la orilla de un río,
+ que da su fruto a su tiempo
+ y jamás se marchitan sus hojas.
+ ¡Todo lo que hace, le sale bien!
+
+ 4
+ Con los malvados no pasa lo mismo,
+ pues son como paja que se lleva el viento.
+ 5
+ Por eso los malvados caerán bajo el juicio de Dios
+ y no tendrán parte en la comunidad de los justos.
+ 6
+ El Señor cuida el camino de los justos,
+ pero el camino de los malos lleva al desastre.
  */
 public class BackgroundService extends Service {
 
-    String value = "";
+
     Contador Counter2;
-    long tiempo = 60*1000;
-    SecureRandom random = new SecureRandom();
-    int numeroRandom = 0;
-    long valorTiempo = 0;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -33,38 +54,11 @@ public class BackgroundService extends Service {
         filter.addAction(Intent.ACTION_SCREEN_OFF);
         BroadcastReceiver mReceiver = new ScreenState();
         registerReceiver(mReceiver, filter);
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        value = sp.getString("LISTA","1");
-        Counter2 = new Contador(this,TimerTimes()*tiempo);
+        Counter2 = new Contador(this);
 
     }
 
-    public long TimerTimes(){
 
-        if(value.equals("1")){
-
-            long[] array = {5,7,9};
-            numeroRandom = random.nextInt(array.length);
-            valorTiempo = array[numeroRandom];
-            return valorTiempo;
-        }
-        else if(value.equals("2")) {
-
-            long[] array = {12,17,20};
-            numeroRandom = random.nextInt(array.length);
-            valorTiempo = array[numeroRandom];
-            return valorTiempo;
-        }
-        else if(value.equals("3")) {
-
-            long[] array = {25,33,40};
-            numeroRandom = random.nextInt(array.length);
-            valorTiempo = array[numeroRandom];
-            return valorTiempo;
-        }else{
-            return 20;
-        }
-    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -74,7 +68,6 @@ public class BackgroundService extends Service {
             boolean screenOn = intent.getBooleanExtra("screen_state", false);
             if (!screenOn) {
                 Counter2.start();
-                System.out.println("Se definieron "+TimerTimes()+" minutos");
             } else {
                 Counter2.stop();
             }

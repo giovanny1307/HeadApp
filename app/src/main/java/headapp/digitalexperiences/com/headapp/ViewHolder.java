@@ -13,6 +13,8 @@ import headup.digitalexperiences.com.headup.R;
 
 /**
  * Created by Giovanny on 10/26/2015.
+ * "Pidan, y se les dará; busquen, y hallarán; llamen, y se les abrirá.
+    mateo 7:7
  */
 public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -42,9 +44,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         texto.setTypeface(font);
         texto.setBackgroundColor(00000000);
 
-        if(sp.getBoolean("COLORCARDS",false)==false){
-            cv.setCardBackgroundColor(ctx.getResources().getColor(R.color.colorFondoTarjetas));}
-        else{cv.setCardBackgroundColor(color.getColor());}
+        cv.setCardBackgroundColor(color.getColor());
 
 
         cv = (CardView)itemView.findViewById(R.id.cv);

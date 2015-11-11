@@ -16,6 +16,9 @@ import headup.digitalexperiences.com.headup.R;
 
 /**
  * Created by Giovanny on 10/26/2015.
+ * pero los que confían en el Señor tendrán siempre nuevas fuerzas y podrán volar como las águilas; podrán correr sin cansarse y caminar sin fatigarse
+ *isaias 40:31
+ *
  */
 public class Data {
 

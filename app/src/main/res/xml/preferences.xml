@@ -13,7 +13,7 @@
         android:summary="@string/Summarymood"
         android:entries="@array/listentries"
         android:entryValues="@array/listvalues"
-        android:defaultValue="1"/>
+        android:defaultValue="2"/>
 
     <ListPreference
         android:key="TYPEFACES"
@@ -21,15 +21,8 @@
         android:summary="@string/Summarytype"
         android:entries="@array/typefaces"
         android:entryValues="@array/typevalues"
-        android:defaultValue="1"/>
+        android:defaultValue="3"/>
 
-    <SwitchPreference
-        android:key="COLORCARDS"
-        android:title="@string/colorcars"
-        android:summary="@string/Summarycolorcards"
-        android:defaultValue="false"
-
-        />
 
     <Preference android:key="dialog_preference"
         android:title="@string/creditos"/>

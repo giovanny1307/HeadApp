@@ -27,6 +27,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -45,6 +46,20 @@ import headup.digitalexperiences.com.headup.R;
 
 /**
  * Created by Giovanny on 10/26/2015.
+ Esta Applicacion movil va dedicada a la Virgen Maria y a Dios nuestro señor.
+ Que esta aplicacion le traiga dicha y alegria a las personas que la usen y muchas bendiciones para
+ ellos y para su creador.
+
+ Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve. A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando, en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clementísima, oh piadosa, oh dulce siempre Virgen María!
+
+ V.Ruega por nosotros, Santa Madre de Dios.
+ R.Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.
+
+ Oración
+ Omnipotente y sempiterno Dios, que con la cooperación del Espíritu Santo, preparaste el cuerpo y el alma de la gloriosa Virgen y Madre María para que fuese merecedora de ser digna morada de tu Hijo; concédenos que, pues celebramos con alegría su conmemoración, por su piadosa intercesión seamos liberados de los males presentes y de la muerte eterna. Por el mismo Cristo nuestro Señor.
+
+ R.Amén
+
  */
 public class HeadAppMain extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -126,6 +141,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
 
 
 
+
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
@@ -152,6 +168,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 if (typing() == true) {
+
 
                     mButton.setImageResource(R.mipmap.ic_sendb);
                     mButton.setAnimation(animScale);
@@ -246,15 +263,26 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
                             Toast.LENGTH_SHORT).show();
                 } else {
                     save();
-                    if(DatabaseEmpty()==true){
+                    if (DatabaseEmpty() == true) {
                         blank.setVisibility(View.VISIBLE);
-                    }else{blank.setVisibility(View.INVISIBLE);}
+                    } else {
+                        blank.setVisibility(View.INVISIBLE);
+                    }
                 }
                 mText.setText("");
             }
         });
 
         iconochange();
+
+
+        mText.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                blank.setVisibility(View.GONE);
+                return false;
+            }
+        });
 
 
 
@@ -366,6 +394,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
     protected void onResume() {
         super.onResume();
         iconochange();
+        GoneHint();
 
         sp.registerOnSharedPreferenceChangeListener(mListener);
 
@@ -376,6 +405,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
     protected void onPause() {
         super.onPause();
         iconochange();
+        GoneHint();
         sp.registerOnSharedPreferenceChangeListener(mListener);
     }
 
@@ -403,5 +433,10 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
         return false;
     }
 
+    public void GoneHint(){
+        if( mText.isActivated()){
+            blank.setVisibility(View.GONE);
+        }
+    }
 
 }

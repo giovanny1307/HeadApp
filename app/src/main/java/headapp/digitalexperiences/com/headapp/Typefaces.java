@@ -6,6 +6,39 @@ import android.preference.PreferenceManager;
 
 /**
  * Created by Giovanny on 10/26/2015.
+ * Jehová es tu guardador
+ Cántico gradual.
+
+ 121  Alzaré mis ojos a los montes;
+ ¿De dónde vendrá mi socorro?
+
+ 2
+ Mi socorro viene de Jehová,
+ Que hizo los cielos y la tierra.
+
+ 3
+ No dará tu pie al resbaladero,
+ Ni se dormirá el que te guarda.
+
+ 4
+ He aquí, no se adormecerá ni dormirá
+ El que guarda a Israel.
+
+ 5
+ Jehová es tu guardador;
+ Jehová es tu sombra a tu mano derecha.
+
+ 6
+ El sol no te fatigará de día,
+ Ni la luna de noche.
+
+ 7
+ Jehová te guardará de todo mal;
+ El guardará tu alma.
+
+ 8
+ Jehová guardará tu salida y tu entrada
+ Desde ahora y para siempre.
  */
 public class Typefaces {
 
@@ -21,7 +54,7 @@ public class Typefaces {
     public String font(){
 
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(contexto);
-        value = sp.getString("TYPEFACES","1");
+        value = sp.getString("TYPEFACES","3");
         int foo = Integer.parseInt(value);
         String fuente;
         switch (foo){

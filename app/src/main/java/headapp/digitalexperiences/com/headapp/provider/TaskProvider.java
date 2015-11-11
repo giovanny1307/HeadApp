@@ -13,6 +13,9 @@ import android.net.Uri;
 
 /**
  * Created by Giovanny on 10/26/2015.
+ * Oh Dios, que con la claridad del Espiritu Santo iluminaste los corazones de los fieles; concedenos
+ * este mismo Espiritu para obrar con prudencia y rectitud, y gozar siempre de sus consuelos inefables.
+ * Por jesucristo nuestro señor. Amen.
  */
 public class TaskProvider  extends ContentProvider {
 

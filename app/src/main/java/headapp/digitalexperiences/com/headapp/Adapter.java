@@ -20,6 +20,7 @@ import headup.digitalexperiences.com.headup.R;
 
 /**
  * Created by Giovanny on 10/26/2015.
+ * Ven divina voluntad a pensar en mi mente a mirar en mis ojos escuchar en mis oídos hablar en mi boca a palpitar en mi corazón a circular en mi sangre a obrar en mis manos a caminar en mis pies.
  */
 public class Adapter extends RecyclerView.Adapter<ViewHolder>   {
 
