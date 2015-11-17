@@ -2,6 +2,7 @@ package headapp.digitalexperiences.com.headapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 
@@ -39,81 +40,44 @@ import java.util.TimerTask;
  pues yo encontrar complacencia en someter los demonios al pleno efecto de Mi poder en el camino por la vida de esa alma."
 
  */
-public class Contador {
+public class Contador extends CountDownTimer{
 
     private Context contexto;
-    String value ="";
-    SecureRandom random = new SecureRandom();
-    int numeroRandom = 0;
-    long valorTiempo = 0;
-    private Handler handler = new Handler();
+
+    long Tiempo =0;
 
 
-    public Contador(Context ctx) {
+
+    public Contador(Context ctx, long time) {
+        super(time,1000);
         this.contexto = ctx;
-
-
-    }
-
-    public long TimerTimes(){
-
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(contexto);
-        value = sp.getString("LISTA","2");
-
-        if(value.equals("1")){
-
-            long[] array = {1020000,1380000,1500000};
-            numeroRandom = random.nextInt(array.length);
-            valorTiempo = array[numeroRandom];
-
-            return valorTiempo;
-        }
-        else if(value.equals("2")) {
-
-            long[] array = {1800000,1980000,2200000};
-            numeroRandom = random.nextInt(array.length);
-            valorTiempo = array[numeroRandom];
-
-            return valorTiempo;
-        }
-        else if(value.equals("3")) {
-
-            long[] array = {2820000,3180000,4200000};
-            numeroRandom = random.nextInt(array.length);
-            valorTiempo = array[numeroRandom];
-
-            return valorTiempo;
-        }else{
-            return 20;
-        }
-
+        Tiempo = time;
 
     }
 
 
-    public void start() {
-        handler.postDelayed(runnable, TimerTimes());
+
+
+    @Override
+    public void onTick(long millisUntilFinished) {
+
+        System.out.println(" " + millisUntilFinished/(60*1000) + " minutos");
 
     }
 
-    private  Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            Data datos = new Data(contexto);
-            datos.retriveMensajes();
-            Notificacion noti = new Notificacion(datos.prefijo()+" "+datos.NombreDueno(contexto)+" "
-                    +datos.sufijo(), datos.getMensaje(), contexto);
-            noti.Notificador();
-            System.out.println("Que los anhelos de tu corazon se hagan realidad");
-            System.out.println("Se definieron " + valorTiempo/(60*1000) + " minutos");
-            handler.postDelayed(this,TimerTimes());
-        }
-    };
+    @Override
+    public void onFinish() {
 
+        Data datos = new Data(contexto);
+        datos.retriveMensajes();
+        Notificacion noti = new Notificacion(datos.prefijo()+" "+datos.NombreDueno(contexto)+" "
+                +datos.sufijo(), datos.getMensaje(), contexto);
+        noti.Notificador();
+        System.out.println("Que los anhelos de tu corazon se hagan realidad");
 
-    public void stop() {
-       handler.removeCallbacks(runnable);
     }
+
+
 
 
 

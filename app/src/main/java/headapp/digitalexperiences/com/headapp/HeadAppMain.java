@@ -25,6 +25,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -50,13 +51,19 @@ import headup.digitalexperiences.com.headup.R;
  Que esta aplicacion le traiga dicha y alegria a las personas que la usen y muchas bendiciones para
  ellos y para su creador.
 
- Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve. A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando, en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clementísima, oh piadosa, oh dulce siempre Virgen María!
+ Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve.
+ A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos, gimiendo y llorando, en este valle de lágrimas.
+ Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro muéstranos a Jesús,
+ fruto bendito de tu vientre. ¡Oh clementísima, oh piadosa, oh dulce siempre Virgen María!
 
  V.Ruega por nosotros, Santa Madre de Dios.
  R.Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo.
 
  Oración
- Omnipotente y sempiterno Dios, que con la cooperación del Espíritu Santo, preparaste el cuerpo y el alma de la gloriosa Virgen y Madre María para que fuese merecedora de ser digna morada de tu Hijo; concédenos que, pues celebramos con alegría su conmemoración, por su piadosa intercesión seamos liberados de los males presentes y de la muerte eterna. Por el mismo Cristo nuestro Señor.
+ Omnipotente y sempiterno Dios, que con la cooperación del Espíritu Santo, preparaste el cuerpo y el
+ alma de la gloriosa Virgen y Madre María para que fuese merecedora de ser digna morada de tu Hijo;
+ concédenos que, pues celebramos con alegría su conmemoración, por su piadosa intercesión seamos liberados
+ de los males presentes y de la muerte eterna. Por el mismo Cristo nuestro Señor.
 
  R.Amén
 
@@ -352,12 +359,16 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
             Intent serviceIntent = new Intent(HeadAppMain.this, BackgroundService.class);
             if (isMyServiceRunning(BackgroundService.class) == false) {
                 startService(serviceIntent);
-                Toast.makeText(this, "on", Toast.LENGTH_SHORT).show();
+                Toast toast = Toast.makeText(this,R.string.on, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_VERTICAL,0,-280);
+                toast.show();
                 toolbar.setLogo(R.mipmap.ic);
 
             } else {
                 stopService(serviceIntent);
-                Toast.makeText(this, "off", Toast.LENGTH_SHORT).show();
+                Toast toast = Toast.makeText(this, R.string.off, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0, -280);
+                toast.show();
                 toolbar.setLogo(R.mipmap.ic_launcherhapp);
             }
         }

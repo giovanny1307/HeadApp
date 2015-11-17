@@ -41,6 +41,13 @@ import java.security.SecureRandom;
 public class BackgroundService extends Service {
 
 
+
+    SecureRandom random = new SecureRandom();
+    int numeroRandom = 0;
+    long valorTiempo = 0;
+    String value ="";
+    SharedPreferences sp;
+    long Time = 0;
     Contador Counter2;
 
     @Override
@@ -54,9 +61,53 @@ public class BackgroundService extends Service {
         filter.addAction(Intent.ACTION_SCREEN_OFF);
         BroadcastReceiver mReceiver = new ScreenState();
         registerReceiver(mReceiver, filter);
-        Counter2 = new Contador(this);
+        Time = TimerTimes();
+        Counter2 =  new Contador(this,Time);
+
+
 
     }
+
+
+
+    public long TimerTimes(){
+        sp = PreferenceManager.getDefaultSharedPreferences(HeadAppApplication.getContext());
+        value = sp.getString("LISTA", "1");
+
+        if(value.equals("1")){
+
+            long[] array = {420000,720000,900000,1020000};
+            numeroRandom = random.nextInt(array.length);
+            valorTiempo = array[numeroRandom];
+
+            return valorTiempo;
+        }
+        else if(value.equals("2")) {
+
+            long[] array = {1200000,1380000,1500000,1800000};
+            numeroRandom = random.nextInt(array.length);
+            valorTiempo = array[numeroRandom];
+
+            return valorTiempo;
+        }
+        else if(value.equals("3")) {
+
+            long[] array = {21980000,2280000,2400000,2640000};
+            numeroRandom = random.nextInt(array.length);
+            valorTiempo = array[numeroRandom];
+
+            return valorTiempo;
+        }else{
+            return 3300000;
+        }
+
+
+    }
+
+
+
+
+
 
 
 
@@ -69,7 +120,11 @@ public class BackgroundService extends Service {
             if (!screenOn) {
                 Counter2.start();
             } else {
-                Counter2.stop();
+                Counter2.cancel();
+                Counter2 =  new Contador(this,TimerTimes());
+
+
+
             }
         }
         return START_STICKY;
@@ -77,7 +132,7 @@ public class BackgroundService extends Service {
 
     public void onDestroy() {
         super.onDestroy();
-        Counter2.stop();
+        Counter2.cancel();
         stopSelf();
     }
 

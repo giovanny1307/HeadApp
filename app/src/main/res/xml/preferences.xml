@@ -13,7 +13,7 @@
         android:summary="@string/Summarymood"
         android:entries="@array/listentries"
         android:entryValues="@array/listvalues"
-        android:defaultValue="2"/>
+        android:defaultValue="1"/>
 
     <ListPreference
         android:key="TYPEFACES"
