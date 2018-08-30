@@ -8,12 +8,13 @@ android {
         applicationId "headup.digitalexperiences.com.headup"
         minSdkVersion 15
         targetSdkVersion 27
+        multiDexEnabled true
         versionCode 9
         versionName "3.7"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -33,7 +34,7 @@ dependencies {
     implementation 'com.github.navasmdc:MaterialDesign:1.5@aar'
     implementation 'com.ogaclejapan.smarttablayout:library:1.2.1@aar'
 
-    implementation 'com.google.android.gms:play-services:6.5.87'
+    implementation 'com.google.android.gms:play-services:11.4.0'
     implementation 'com.github.amlcurran.showcaseview:library:5.3.0'
     implementation 'com.evernote:android-job:1.2.6'
 

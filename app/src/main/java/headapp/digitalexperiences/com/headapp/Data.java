@@ -28,9 +28,7 @@ public class Data {
 
     private Context ctx;
 
-
-
-    Data (Context base){
+    public Data (Context base){
         this.ctx = base;
     }
 

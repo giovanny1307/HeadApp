@@ -56,6 +56,8 @@ import java.security.SecureRandom;
 import java.util.Calendar;
 import java.util.Date;
 
+import headapp.digitalexperiences.com.headapp.notificationJob.MessageNotificationJob;
+import headapp.digitalexperiences.com.headapp.notificationJob.NotificationJobCreator;
 import headapp.digitalexperiences.com.headapp.provider.TaskProvider;
 import headup.digitalexperiences.com.headup.R;
 
@@ -153,9 +155,6 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
         if(DatabaseEmpty()==true){
             blank.setVisibility(View.VISIBLE);
         }else{blank.setVisibility(View.GONE);}
-
-
-
 
 
 
@@ -456,6 +455,8 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
 
             return true;
         }
+
+        MessageNotificationJob.schedulePeriodic();
 
         return false;
     }
