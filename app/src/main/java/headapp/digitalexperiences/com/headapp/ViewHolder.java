@@ -2,6 +2,7 @@ package headapp.digitalexperiences.com.headapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.CardView;
@@ -20,7 +21,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     public TextView texto;
     public CardView cv;
-    ColoresMa color = new ColoresMa();
+    ColoresMa color = new ColoresMa(); //declaro variable de una clase, clase colores ma
 
     Context ctx;
 
@@ -42,6 +43,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         Typeface font = Typeface.createFromAsset(ctx.getAssets(), fontpath.font());
         texto.setTextSize(23);
         texto.setTypeface(font);
+        texto.setTextColor(Color.WHITE);
         texto.setBackgroundColor(00000000);
 
         cv.setCardBackgroundColor(color.getColor());

@@ -7,13 +7,6 @@
         android:summary="@string/Summaryname"
         android:defaultValue=""/>
 
-    <ListPreference
-        android:key="LISTA"
-        android:title="@string/comportamientodeHeadApp"
-        android:summary="@string/Summarymood"
-        android:entries="@array/listentries"
-        android:entryValues="@array/listvalues"
-        android:defaultValue="1"/>
 
     <ListPreference
         android:key="TYPEFACES"

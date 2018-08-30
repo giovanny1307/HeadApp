@@ -1,14 +1,19 @@
 package headapp.digitalexperiences.com.headapp;
 
 import android.app.ActivityManager;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -26,6 +31,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -37,10 +43,18 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ActionItemTarget;
+import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
+import com.github.amlcurran.showcaseview.targets.PointTarget;
+import com.github.amlcurran.showcaseview.targets.Target;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.security.SecureRandom;
+import java.util.Calendar;
+import java.util.Date;
 
 import headapp.digitalexperiences.com.headapp.provider.TaskProvider;
 import headup.digitalexperiences.com.headup.R;
@@ -82,7 +96,8 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
     private String[] mensajes;
     private ContentResolver cr;
     private Cursor cursor;
-    public static String modePreferences = "Mode_Preferences";
+    private Target T1;
+
 
     private int count = 0;
     private SecureRandom randommensaje = new SecureRandom();
@@ -92,14 +107,11 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
                 @Override
                 public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
                     recreate();
-                    Intent serviceIntentB = new Intent(HeadAppMain.this, BackgroundService.class);
-                    if (isMyServiceRunning(BackgroundService.class) == true) {
-                        stopService(serviceIntentB);
-                        startService(serviceIntentB);
-                    }
                     Log.i("info", "A preference has been changed");
                 }
             };
+
+    SharedPreferences prefs = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,18 +137,17 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
         // inicializar variables y layout
         setContentView(R.layout.activity_pantalla_de_entrada);
 
+
+        BroadcastReceiver mReceiver = new Alarm();
+
+
+
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("8BC8C6077565975641B15A9D60B1B2A4") // Always add a test device, you should not see your own ads or else Google Admob will block you! This is code for my specific nexus 5.
                 .build();
         mAdView.loadAd(adRequest);
-        SharedPreferences prefs = getSharedPreferences(this.modePreferences, MODE_PRIVATE);
-        int firstUse = prefs.getInt("first_use", 0);
-        if(firstUse <= 0) {
-            // AutoStartService
-            Intent serviceIntentD = new Intent(HeadAppMain.this, BackgroundService.class);
-            startService(serviceIntentD);
-        }
+
 
         blank = (TextView) findViewById(R.id.blankSlate);
         if(DatabaseEmpty()==true){
@@ -155,6 +166,17 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
         getSupportActionBar().setLogo(R.mipmap.ic_launcherhapp);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setTitle("");
+        prefs = getSharedPreferences("headapp.digitalexperiences.com.headapp",MODE_PRIVATE);
+
+
+        int firstUse = preferences.getInt("first_use", 0);
+        if(firstUse <= 0) {
+            // AutoStartAlarm
+            //metodoPine();
+
+
+
+        }
 
 
         final Animation animScale = AnimationUtils.loadAnimation(this, R.anim.animacionboton);
@@ -163,6 +185,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
         sp = PreferenceManager.getDefaultSharedPreferences(this);
         mButton = (ImageButton) findViewById(R.id.btn_send);
         mText = (EditText) findViewById(R.id.iputmensajes);
+
         mText.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -229,7 +252,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
                                 mAdapter.deleteMensaje(HeadAppMain.this, id);
                                 if(DatabaseEmpty()==true){
                                     blank.setVisibility(TextView.VISIBLE);
-                                    iconochange();
+
                                 }
                                 break;
 
@@ -263,6 +286,8 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
             @Override
             public void onClick(View w) {
 
+
+
                 String mensajePara_ti = mText.getText().toString();
 
                 if (mensajePara_ti.matches("")) {
@@ -280,7 +305,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
             }
         });
 
-        iconochange();
+
 
 
         mText.setOnTouchListener(new View.OnTouchListener() {
@@ -291,9 +316,13 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
             }
         });
 
-
+        //metodoPine();
 
     }
+
+
+
+
 
     public boolean typing() {
 
@@ -319,27 +348,19 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
 
     }
 
-    private boolean isMyServiceRunning(Class<?> serviceClass) {
-        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-            if (serviceClass.getName().equals(service.service.getClassName())) {
-                return true;
-            }
-        }
-        return false;
-    }
+
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_pantalla_de_entrada, menu);
+        getMenuInflater().inflate(R.menu.menu_pantalla_de_entrada, menu); //BOTONES DE MI TOOLBAR
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-
+        //ACCIONE DE LOS BOTONES DE MI TOOLBAR
         int id = item.getItemId();
 
         if (id == R.id.share) {
@@ -351,40 +372,16 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.Comparte2)));
         }
-        if (id == R.id.settings) {
+        if (id == R.id.ajustes) {
             startActivity(new Intent(this, Settings.class));
         }
-        if (id == R.id.on_off) {
 
-            Intent serviceIntent = new Intent(HeadAppMain.this, BackgroundService.class);
-            if (isMyServiceRunning(BackgroundService.class) == false) {
-                startService(serviceIntent);
-                Toast toast = Toast.makeText(this,R.string.on, Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER_VERTICAL,0,-280);
-                toast.show();
-                toolbar.setLogo(R.mipmap.ic);
 
-            } else {
-                stopService(serviceIntent);
-                Toast toast = Toast.makeText(this, R.string.off, Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER_VERTICAL, 0, -280);
-                toast.show();
-                toolbar.setLogo(R.mipmap.ic_launcherhapp);
-            }
-        }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void iconochange() {
 
-        if (isMyServiceRunning(BackgroundService.class) == true) {
-            toolbar.setLogo(R.mipmap.ic);
-        } else {
-            toolbar.setLogo(R.mipmap.ic_launcherhapp);
-        }
-
-    }
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -404,10 +401,29 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
     @Override
     protected void onResume() {
         super.onResume();
-        iconochange();
         GoneHint();
-
+        T1 = new Target() {
+            @Override
+            public Point getPoint() {
+                return new ViewTarget(toolbar.findViewById(R.id.ajustes)).getPoint();
+            }
+        };
         sp.registerOnSharedPreferenceChangeListener(mListener);
+        if (prefs.getBoolean("firstrun", true)) {
+            // Do first run stuff here then set 'firstrun' as false
+            new ShowcaseView.Builder(this)
+
+                    .withMaterialShowcase()
+                    .setTarget(T1)
+                    .setStyle(R.style.CustomShowcaseTheme2)
+                    .setContentTitle(R.string.personaliza_HeadApp)
+                    .setContentText(R.string.personaliza_HeadApp2)
+                    .hideOnTouchOutside()
+                    .build();
+
+            // using the following line to edit/commit prefs
+            prefs.edit().putBoolean("firstrun", false).commit();
+        }
 
 
     }
@@ -415,7 +431,7 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
     @Override
     protected void onPause() {
         super.onPause();
-        iconochange();
+
         GoneHint();
         sp.registerOnSharedPreferenceChangeListener(mListener);
     }
@@ -449,5 +465,36 @@ public class HeadAppMain extends AppCompatActivity implements LoaderManager.Load
             blank.setVisibility(View.GONE);
         }
     }
+
+
+
+    void metodoPine(){
+
+
+        Date dt;
+        Calendar calendario = Calendar.getInstance();
+
+
+        calendario.set(calendario.HOUR_OF_DAY,9);
+        calendario.set(calendario.MINUTE,0);
+        calendario.set(calendario.SECOND,0);
+        calendario.add(calendario.DAY_OF_YEAR, 1);
+
+        dt = calendario.getTime();
+
+        System.out.println("piñetime"+dt);
+
+        Intent intent = new Intent(HeadAppMain.this, Alarm.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0,
+                intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        alarmManager.cancel(pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendario.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+
+
+    }
+
+
 
 }

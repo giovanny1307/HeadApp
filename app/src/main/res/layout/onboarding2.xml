@@ -24,7 +24,7 @@
         android:id="@+id/imageView"
         android:layout_gravity="center_horizontal"
         android:scaleType="center"
-        android:src="@drawable/onboarda"
+        android:src="@drawable/onboardaa"
 
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

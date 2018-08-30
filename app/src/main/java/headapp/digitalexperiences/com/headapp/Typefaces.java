@@ -69,7 +69,7 @@ public class Typefaces {
                 break;
             case 5:  fuente = "fonts/ostrich.otf";
                 break;
-            case 6:  fuente = "fonts/ostrich_regular.ttf";
+            case 6:  fuente = "fonts/starjedi.ttf";
                 break;
             case 7:  fuente = "fonts/underwood_champion.ttf";
                 break;

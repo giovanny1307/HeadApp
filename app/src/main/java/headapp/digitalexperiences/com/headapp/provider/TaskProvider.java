@@ -146,6 +146,8 @@ public class TaskProvider  extends ContentProvider {
                         COL_ID + " integer primary key autoincrement, " +
                         COL_MSG + " text not null);";
 
+
+        //CONSTRUCTOR ES LA FORMA DE CREAR UNA INSTACIA DE MI CLASE, EN ESTE CASO UN OBJETO DE TIPO BASE DE DATOS
         public DatabaseHelper (Context contexto){
             super(contexto, DATABASE_NAME, null, DATABASE_VERSION);
 

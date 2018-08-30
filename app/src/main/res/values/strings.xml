@@ -5,34 +5,28 @@
 
     <string name="banner_ad_unit_id">ca-app-pub-8311139956951620/5053270395</string>
 
-    <string name="bodyOnboarding1">HeadApp will help encourage you on your life journey whether it\’s
-        goals or daily inspirations. By simply filling it with positive messages!</string>
+    <string name="bodyOnboarding1">2015 has come and gone so quickly, so why not start 2016 with a KICK! Start your New
 
-    <string name="bodyOnboarding1_2">You can program HeadApp to motivate inspire, or help you achieve
-        that goal you\’ve always wanted. </string>
+   Years Resolutions with HeadApp!</string>
 
-    <string name="bodyOnboarding2">Simply fill HeadApp with encouraging messages that aim towards your
-        daily inspirations or desired goals. And if you don\’t want them anymore just swipe them
-        away and write new ones. </string>
+    <string name="bodyOnboarding2">It\’s simple just write down your New Years Resolutions for 2016 and let HeadApp remind
 
-    <string name="bodyOnboarding3">HeadApp will deliver the messages to you at the right moment so you
-        can always be on track of what is really important! So what are you waiting for LET\’S GET STARTED!! .</string>
+you how important your goals are. </string>
 
-    <string name="blank_slate">Write some inspiraional messages and tap the start button!</string>
+    <string name="bodyOnboarding3">The only person stopping you is yourself so why not get it in your head with HeadApp! So
 
-    <string name="modointenso">High</string>
+let\’s start 2016 with a bang and accomplish all of our desired goals! So what are you waiting
 
-    <string name="modomedio">Med</string>
+for!?</string>
 
-    <string name="modorelax">Low</string>
+    <string name="blank_slate">Write down your resolution\'s for the next year</string>
 
-    <string name="comportamientodeHeadApp">Frequency of messages</string>
+
 
     <string name="Ajustes">Settings</string>
 
     <string name="NombredeUsuario">Username</string>
 
-    <string name="Summarymood">Set the notification frequency.</string>
 
     <string name="ajustesgenerales">HeadApp settings</string>
 
@@ -79,23 +73,18 @@
     </string>
 
       <string name="diseño">
-        Created by DigitalExperiences in Bogotá.
+        Blent.
     </string>
 
     <string-array name="hints">
-        <item>Type for your mind</item>
-        <item>Text for your soul</item>
-        <item>Write something positive!</item>
+        <item>Write your new year\'s resolution</item>
+
     </string-array>
 
     <string-array name="mensajes_precargados">
-        <item>Begin each day with a grateful heart.</item>
-        <item>Never give up!</item>
-        <item>Begin each day with a grateful heart.</item>
-        <item>Dream it. Believe it. Achieve it.</item>
-        <item>You are what you say! Use the power of the spoken word.</item>
-        <item>Don\’t stress! Do your best! Forget the rest!</item>
-        <item>A lion doesn\’t lose sleep over the opinion of sheep.</item>
+        <item>Write your new year\'s resolution, open HeadApp! </item>
+        <item>What are you waiting for! write down the goals for next year</item>
+        <item>Im here to help, let\'s get started</item>
     </string-array>
 
     <string-array name="sufijos">
@@ -105,10 +94,25 @@
     </string-array>
 
     <string-array name="prefijos">
-        <item>Hi</item>
         <item>Hey</item>
 
     </string-array>
+
+
+    <string name="personaliza_HeadApp">
+        First Off personalize HeadApp
+    </string>
+
+      <string name="personaliza_HeadApp2">
+          Set your favorite font type and user name.
+          Just tap the settings button.
+
+    </string>
+
+    <string name="cerrar">
+        Close
+    </string>
+
 
 
 </resources>

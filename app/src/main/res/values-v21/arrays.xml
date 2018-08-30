@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="listentries">
-        <item>@string/modointenso</item>
-        <item>@string/modomedio</item>
-        <item>@string/modorelax</item>
-    </string-array>
+
     <string-array name="listvalues">
         <item>1</item>
         <item>2</item>
@@ -17,7 +13,7 @@
         <item>Capture</item>
         <item>Lobster</item>
         <item>Ostrich bold</item>
-        <item>Ostrich</item>
+        <item>StarJedi</item>
         <item>Underwood</item>
     </string-array>
 

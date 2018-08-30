@@ -4,14 +4,9 @@
 
 
 
-    <item android:id="@+id/on_off"
-        android:icon="@mipmap/ic_power_settings_new_white_24dp"
-        android:title="encendido"
-        android:orderInCategory="1"
-        app:showAsAction="always"
-        />
 
-    <item android:id="@+id/settings"
+
+    <item android:id="@+id/ajustes"
         android:icon="@mipmap/ic_settings_white_24dp"
         android:title="ajustes"
         android:orderInCategory="3"

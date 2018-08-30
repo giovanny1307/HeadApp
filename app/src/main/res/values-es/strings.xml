@@ -10,34 +10,26 @@
 
 
 
-    <string name="bodyOnboarding1">Motiva tu vida con HeadApp, alcanza tus metas e inspirate a ser mejor.</string>
+    <string name="bodyOnboarding1">Alcanza los propósitos de 2016 con la ayuda de HeadApp!</string>
 
-    <string name="bodyOnboarding1_2">Simplemente alimenta a HeadApp con mensajes positivos!  Veras como tu
-        realidad cambia y tus objetivos son alcanzados.</string>
 
-    <string name="bodyOnboarding2">Escribe mensajes enfocados a motivarte diariamente, inspirarte o alcanzar
-        ese objetivo que tanto deseas. Si no los necesitas mas simplemente deslízalos y
-        reemplázalos por mensajes nuevos.  </string>
 
-    <string name="bodyOnboarding3">HeadApp te devolverá tus mensajes en el momento adecuado, para
-        que nunca pierdas de vista lo que de verdad importa.   Que estas esperando, empieza ya! .</string>
+    <string name="bodyOnboarding2">Simplemente escribe todos tus propositos de año nuevo.</string>
 
-        <string name="blank_slate">Comienza a cargar mensajes positivos y enseguida
-    enciende HeadApp haciendo click en el botón de encendido</string>
+    <string name="bodyOnboarding3">HeadApp te devolverá un objetivo diario, para
+        que nunca pierdas de vista lo que de verdad importa. Que estas esperando, empieza ya! .</string>
 
-        <string name="modointenso">Alta</string>
+        <string name="blank_slate">Comienza a cargar tus propositos de año nuevo!</string>
 
-        <string name="modomedio">Media</string>
 
-        <string name="modorelax">Baja</string>
 
-        <string name="comportamientodeHeadApp">Frecuencia de envío de mensaje.</string>
+
 
         <string name="Ajustes">Ajustes</string>
 
         <string name="NombredeUsuario">Nombre de usuario</string>
 
-        <string name="Summarymood">Ajusta la frecuencia de notificación.</string>
+
 
         <string name="ajustesgenerales">HeadApp settings</string>
 
@@ -80,19 +72,15 @@
            </string>
 
         <string-array name="hints">
-            <item>Escribe para tu mente</item>
-            <item>Textea para tu alma</item>
-            <item>Solo escribe algo positivo!</item>
+            <item>Escribe tus propósitos  de año nuevo.</item>
+
         </string-array>
 
     <string-array name="mensajes_precargados">
-        <item>"Haz de tu vida un sueño, y de tu sueño una realidad."</item>
-        <item>No te rindas jamás!</item>
-        <item>Agradece cada día por todo lo que tienes.</item>
-        <item>¡Anímate! Escribe algo que te inspire.</item>
-        <item>"toda la sabiduría humana estará resumida en dos palabras: ¡Confiar y esperar!"</item>
-        <item>Nada viene de nada, todo requiere esfuerzo.</item>
-        <item>No pierdas de vista lo importante.</item>
+        <item>Que esperas para escribir tus propósitos  de año nuevo!</item>
+        <item>Vamos escribe un objetivo para el año que viene!</item>
+        <item>Estoy aqui para ayudarte a alcanzar tus metas.</item>
+
     </string-array>
 
     <string-array name="sufijos">
@@ -108,8 +96,22 @@
     </string-array>
 
      <string name="diseño">
-        Creado por DigitalExperiences en Bogotá.
+       Blent.
     </string>
+    
+    <string name="personaliza_HeadApp">
+        Primero perzonaliza HeadApp
+    </string>
+
+      <string name="personaliza_HeadApp2">
+        Define como deseas que HeadApp te llame y tu tipo de letra favorito.
+        Solo haz click en el botón de ajustes.
+    </string>
+
+      <string name="cerrar">
+        Cerrar
+    </string>
+
 
 
 </resources>

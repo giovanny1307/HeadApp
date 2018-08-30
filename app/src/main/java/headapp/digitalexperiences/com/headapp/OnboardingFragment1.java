@@ -240,7 +240,6 @@ public class OnboardingFragment1 extends Fragment {
         LinearLayout layout = (LinearLayout)v.findViewById(R.id.onboarding1);
         TextView txt = (TextView) v.findViewById(R.id.texto1);
         TextView txt2 = (TextView) v.findViewById(R.id.texto2);
-        TextView txt3 = (TextView) v.findViewById(R.id.texto3);
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/amatic.ttf");
         txt.setTypeface(font);
         txt.setText(R.string.textoOnBoarding1Title);
@@ -248,10 +247,6 @@ public class OnboardingFragment1 extends Fragment {
         txt2.setTypeface(font);
         txt2.setTextColor(Color.WHITE);
         txt2.setText(R.string.bodyOnboarding1);
-        txt3.setTypeface(font);
-        txt3.setTextColor(Color.WHITE);
-        txt3.setText(R.string.bodyOnboarding1_2);
-
         layout.setBackgroundColor(color.getColor());
         return v;
 
